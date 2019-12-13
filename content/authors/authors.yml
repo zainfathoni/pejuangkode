@@ -1,17 +1,22 @@
-- name: Dennis Brotzky
+- name: Zain Fathoni
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/dennis-brotzky.jpg
+    Zain Fathoni adalah seorang Senior Software Engineer di Ninja Van Singapura.
+    Kini ia sangat tertarik dengan JavaScript dan React beserta ekosistemnya.
+    https://zainf.dev
+  avatar: ./avatars/zain.jpg
   featured: true
   social:
     - name: github
-      url: https://github.com
+      url: https://github.com/zainfathoni
     - name: twitter
-      url: https://github.com
+      url: https://twitter.com/zainfathoni
+    - name: facebook
+      url: https://www.facebook.com/zain.fathoni
     - name: instagram
-      url: https://github.com
-    - name: dribbble
-      url: https://github.com
+      url: https://www.instagram.com/zain.fathoni
     - name: linkedin
-      url: https://github.com
+      url: https://www.linkedin.com/in/zainfathoni/
+    - name: stackoverflow
+      url: https://stackoverflow.com/story/zainfathoni
+    - name: medium
+      url: https://medium.com/@zain.fathoni
