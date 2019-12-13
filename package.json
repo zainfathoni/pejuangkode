@@ -1,6 +1,16 @@
 {
-  "private": true,
-  "name": "site",
+  "private": false,
+  "name": "pejuangkode",
+  "description": "Collaborative Programming Blog for Indonesian Developers",
+  "keywords": [
+    "pejuang",
+    "kode",
+    "programming",
+    "blog",
+    "indonesia"
+  ],
+  "author": "Zain Fathoni <me@zainf.dev> (https://zainf.dev)",
+  "contributors": [],
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
