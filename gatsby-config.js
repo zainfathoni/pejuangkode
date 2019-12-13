@@ -1,33 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    title: `Pejuang Kode`,
+    name: `Zain Fathoni`,
+    siteUrl: `https://pejuangkode.com`,
+    description: `Collaborative Programming Blog for Indonesian Developers`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
-      maxWidth: 652,
+      heading: `🇮🇩 Berjuang dengan 👨🏻‍💻 Kode`,
+      maxWidth: 500,
     },
     social: [
       {
-        name: `twitter`,
-        url: `https://twitter.com/narative`,
-      },
-      {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/zainfathoni/pejuangkode`,
       },
       {
-        name: `instagram`,
-        url: `https://instagram.com/narative.co`,
-      },
-      {
-        name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
+        name: `medium`,
+        url: `https://medium.com/pejuang-kode`,
       },
     ],
   },
