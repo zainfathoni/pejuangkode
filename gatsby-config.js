@@ -6,7 +6,7 @@ module.exports = {
     description: `Collaborative Programming Blog for Indonesian Developers`,
     hero: {
       heading: `🇮🇩 Pejuang Kode 👨🏻‍💻`,
-      maxWidth: 360,
+      maxWidth: 500,
     },
     social: [
       {
