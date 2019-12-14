@@ -19,6 +19,7 @@ const CodeSandbox: React.FC<CodeSandboxProps> = ({ src }) => (
       border: 0;
       border-radius: 4px;
       overflow: hidden;
+      position: relative;
 
       ${mediaqueries.desktop`
         left: -26px;
