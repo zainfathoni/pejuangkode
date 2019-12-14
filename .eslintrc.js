@@ -1,0 +1,22 @@
+module.exports = {
+  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
+  extends: [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+  ],
+  plugins: ["react-hooks"],
+  parserOptions: {
+    ecmaVersion: 2019, // Allows for the parsing of modern ECMAScript features
+    sourceType: "module", // Allows for the use of imports
+  },
+  rules: {
+    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/prop-types": "off",
+  },
+  settings: {
+    react: {
+      version: "detect", // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+  },
+};
