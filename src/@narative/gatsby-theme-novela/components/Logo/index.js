@@ -1,6 +1,6 @@
 import { css } from "@emotion/core";
 import novelaTheme from "@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui";
-import React from "react";
+import React, { useMemo } from "react";
 import { useColorMode } from "theme-ui";
 
 /**
