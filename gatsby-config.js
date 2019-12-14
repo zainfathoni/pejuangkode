@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
+        name: `Pejuang Kode by Zain Fathoni`,
+        short_name: `Pejuang Kode`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
