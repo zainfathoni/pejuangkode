@@ -15,6 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "postbuild": "cp _redirects public/_redirects",
     "serve": "gatsby serve",
     "dev": "gatsby develop",
     "clean": "gatsby clean"
