@@ -21,3 +21,27 @@
       url: https://stackoverflow.com/story/zainfathoni
     - name: medium
       url: https://medium.com/@zain.fathoni
+
+
+- name: Darvin Sinaga
+  slug: darvin-sinaga
+  bio: |
+    Darvin adalah seorang Frontend Developer Tampan di prospace.io.
+    Saat ia sangat tertarik dan menekuni React dan  ekosistemnya.
+    Aktif di Komunitas online maupun offline
+    http://darvinsinaga.com
+  avatar: ./avatars/darvin.jpg
+  featured: true
+  social:
+    - name: github
+      url: https://github.com/nagacoder
+    - name: twitter
+      url: https://twitter.com/perajinkode
+    - name: facebook
+      url: https://www.facebook.com/darvin.sinaga1
+    - name: instagram
+      url: https://www.instagram.com/nagacoder
+    - name: linkedin
+      url: https://www.linkedin.com/in/darvinsinaga/
+    - name: medium
+      url: https://medium.com/@darvinsinaga
