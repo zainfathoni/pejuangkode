@@ -15,6 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "dev": "gatsby develop",
     "clean": "gatsby clean"
   },

@@ -54,6 +54,9 @@ yarn dev
 
 # Build your Gatsby site
 yarn build
+
+# Serve built artifacts
+yarn serve
 ```
 
 ### Help

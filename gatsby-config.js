@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://pejuangkode.com`,
     description: `Collaborative Programming Blog for Indonesian Developers`,
     hero: {
-      heading: `🇮🇩 Berjuang dengan 👨🏻‍💻 Kode`,
+      heading: `🇮🇩 Pejuang Kode 👨🏻‍💻`,
       maxWidth: 500,
     },
     social: [
@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
+        name: `Pejuang Kode by Zain Fathoni`,
+        short_name: `Pejuang Kode`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
