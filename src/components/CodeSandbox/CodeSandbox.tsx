@@ -7,34 +7,43 @@ interface CodeSandboxProps {
 }
 
 /**
- * CodeSandbox styling is based on Paragraph component margin
+ * CodeSandbox styling is based on Code.Prism.Container component styling
  */
 const CodeSandbox: React.FC<CodeSandboxProps> = ({ src }) => (
   <iframe
     css={css`
-      margin: 0 auto 35px;
+      margin: 15px auto 50px;
       width: 100%;
-      max-width: 680px;
-      height: 500px;
+      max-width: 750px;
+      height: 400px;
       border: 0;
       border-radius: 4px;
       overflow: hidden;
 
-      b {
-        font-weight: 800;
-      }
-
       ${mediaqueries.desktop`
-        max-width: 507px;
-      `}
+        left: -26px;
+      `};
 
       ${mediaqueries.tablet`
-        max-width: 486px;
-        margin: 0 auto 25px;
+        max-width: 526px;
+        left: 0;
+
+        textarea,
+        pre {
+          padding: 20px !important;
+        }
       `};
 
       ${mediaqueries.phablet`
-        padding: 0 20px;
+        border-radius: 0;
+        margin: 0 auto 25px;
+        overflow: initial;
+        width: unset;
+        max-width: unset;
+        float: left;
+        min-width: 100%;
+        overflow: initial;
+        position: relative;
       `};
     `}
     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
