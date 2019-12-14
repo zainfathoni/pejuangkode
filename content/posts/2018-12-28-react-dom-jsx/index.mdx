@@ -7,6 +7,8 @@ hero: ./images/hero.jpg
 excerpt: Pengantar awal library React, React DOM, dan syntax JSX beserta latar belakangnya.
 ---
 
+import CodeSandbox from "../../../src/components/CodeSandbox";
+
 Sudah bukan perdebatan lagi bahwa [React](https://reactjs.org) adalah salah satu framework JavaScript yang [paling dominan saat ini](http://stateofjs.com/2017/front-end/results/). Peminatnya pun paling tinggi di antara framework-framework JavaScript lainnya. Namun demikian, React tergolong framework JavaScript yang [cukup sulit untuk dipelajari](https://medium.com/pejuang-kode/react-atau-vue-de25264893f4), berikut beberapa alasannya.
 
 ### React bukan _framework_, tapi _library_
@@ -25,11 +27,7 @@ Saya akan mencoba menyajikan keduanya dengan cara memperkenalkan fitur React sat
 
 Cara termudah untuk mulai menggunakan React adalah menggunakan [CodePen](https://codepen.io/) atau [CodeSandbox](https://codesandbox.io). Dengannya, kita tidak perlu meng-install apapun di komputer kita. Cukup dengan membuka website tersebut dan membuat project baru di sana. Sebagai alat peraga untuk penjelasan saya di tulisan ini, kita akan menggunakan sebuah project di CodeSandbox berikut ini:
 
-<iframe
-  src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/0-persiapan/?autoresize=1&view=editor"
-  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-></iframe>
+<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/0-persiapan/?autoresize=1&view=editor" />
 
 Project di atas bisa Anda _edit_ secara langsung sebagai sarana untuk bereksperimen. Tetapi apabila Anda ingin menjalankannya di komputer Anda secara lokal, tinggal _download_ saja project tersebut, pastikan [NodeJS](https://nodejs.org/en/) sudah terinstall dengan menjalankan perintah `bash…node -v`, lalu jalankan perintah `bash…npm install && npm start` untuk menyalakan aplikasi.
 
@@ -39,7 +37,7 @@ Di project tersebut terdapat tiga buah file, yaitu file JavaScript `index.js`, H
 
 File `index.js` ini berisikan contoh penggunaan React yang paling sederhana. Di sini kita meng-`js…import` dua _library_, yaitu **React** & **ReactDOM**. Kegunaan ReactDOM di sini cukup jelas, yaitu me-_render_ sesuatu ke sebuah HTML element yang memiliki `html…id=root`. Coba buka file `index.html`, pada baris ke-30 akan Anda temukan `html…<div id="root"></div>`. Di situlah aplikasi React kita ini akan dipasang nantinya.
 
-```jsx{2,4,6}
+```jsx {2,4,6}
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -52,15 +50,11 @@ Nah, yang agak aneh adalah, untuk apa kita meng-`js…import` **React**, padahal
 Untuk mengujinya, coba sekarang tambahkan `js…//` di depan `js…import React from 'react'` untuk menjadikannya komentar dan tidak terbaca oleh JavaScript.
 Maka yang Anda lihat adalah pesan error seperti ini:
 
-<iframe
-  src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/2-react/?autoresize=1&fontsize=13&view=split"
-  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-></iframe>
+<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/2-react/?autoresize=1&fontsize=13&view=split" />
 
 Ternyata React dibutuhkan untuk bisa menjalankan baris ini:
 
-```jsx{2}
+```jsx {2}
 ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
 ```
 
@@ -76,7 +70,7 @@ Untuk bisa menjawab kedua pertanyaan di atas, kita perlu berkenalan dulu dengan 
 JSX digunakan di dalam React untuk mengekspresikan (_markup_ yang mirip dengan) HTML di dalam JavaScript. React [tidak mengharuskan](https://reactjs.org/docs/react-without-jsx.html) kita menggunakan JSX, tapi kebanyakan developer merasa sangat terbantu dengannya ketika menyusun tampilan antarmuka (UI) di dalam kode JavaScript.
 Apabila kode di atas kita tulis ulang tanpa menggunakan JSX, maka jadinya akan seperti ini:
 
-```js{2}
+```js {2}
 ReactDOM.render(
   React.createElement('h1', null, 'Hello, world!')
   document.getElementById('root')
@@ -91,7 +85,7 @@ Untuk bisa menggunakan JSX di React dengan baik, kita harus mampu membedakan ant
 
 Dengan JSX, kita bisa membuat HTML yang dinamis. Caranya adalah dengan memasukkan _expression_ ke dalam JSX, dan mengapitnya dengan karakter kurung kurawal `js…{}` seperti ini:
 
-```jsx{2}
+```jsx {2}
 ReactDOM.render(
   <h1>Hello, {/* Letakkan JavaScript Expression di sini */}!</h1>,
   document.getElementById("root")
@@ -100,11 +94,7 @@ ReactDOM.render(
 
 Sebagai contoh, amati bagaimana cara saya membuat kalimat `Hello, world!` sebelumnya menjadi bergantung pada nilai variabel lain. Coba ubah nilai dari variabel `firstName` dan `lastName` di sini, dan amati hasilnya!
 
-<iframe
-  src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/3-1-expression-di-jsx/?autoresize=1&fontsize=12&view=split"
-  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-></iframe>
+<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/3-1-expression-di-jsx/?autoresize=1&fontsize=12&view=split" />
 
 ### 3.2 JSX adalah _Expression_
 
@@ -112,11 +102,7 @@ Selain bisa mengandung _Expression_, ternyata JSX itu sendiri merupakan _Express
 
 Dengan demikian, kita bisa memperlakukannya sebagaimana _Expression_ JavaScript pada umumnya. Misalnya, menjadikannya sebagai nilai kembalian dari sebuah fungsi. Kita coba ganti JSX di atas dengan pemanggilan sebuah fungsi `js…greet(name)`. Coba kosongkan parameter di pemanggilan fungsi `js…greet()` dan amati hasilnya!
 
-<iframe
-  src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/3-2-jsx-adalah-expression/?autoresize=1&fontsize=12&view=split"
-  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-></iframe>
+<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/3-2-jsx-adalah-expression/?autoresize=1&fontsize=12&view=split" />
 
 ### 3.3 _Attributes_ & _Children_ di JSX
 
