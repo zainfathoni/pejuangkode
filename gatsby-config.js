@@ -5,8 +5,8 @@ module.exports = {
     siteUrl: `https://pejuangkode.com`,
     description: `Collaborative Programming Blog for Indonesian Developers`,
     hero: {
-      heading: `🇮🇩 Berjuang dengan 👨🏻‍💻 Kode`,
-      maxWidth: 500,
+      heading: `🇮🇩 Pejuang Kode 👨🏻‍💻`,
+      maxWidth: 360,
     },
     social: [
       {
