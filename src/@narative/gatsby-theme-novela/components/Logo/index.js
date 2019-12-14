@@ -26,7 +26,6 @@ export default function Logo() {
       focusable="false"
       data-prefix="fad"
       data-icon="code"
-      class="svg-inline--fa fa-code fa-w-20"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 640 512"
