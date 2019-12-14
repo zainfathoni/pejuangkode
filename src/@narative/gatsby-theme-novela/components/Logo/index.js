@@ -10,12 +10,17 @@ import { useColorMode } from "theme-ui";
  */
 export default function Logo() {
   const [colorMode] = useColorMode();
+  const primaryColor = useMemo(
+    () =>
+      colorMode === "dark"
+        ? novelaTheme.colors.modes.dark.primary
+        : novelaTheme.colors.primary,
+    [colorMode]
+  );
   return (
     <svg
       css={css`
-        color: ${colorMode === "dark"
-          ? novelaTheme.colors.modes.dark.primary
-          : novelaTheme.colors.primary};
+        color: ${primaryColor};
       `}
       aria-hidden="true"
       focusable="false"
