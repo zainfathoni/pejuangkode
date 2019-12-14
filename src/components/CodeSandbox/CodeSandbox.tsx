@@ -1,6 +1,6 @@
-import React from "react";
 import { css } from "@emotion/core";
 import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+import React from "react";
 
 interface CodeSandboxProps {
   src: string;
