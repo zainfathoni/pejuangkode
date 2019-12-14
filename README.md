@@ -26,15 +26,15 @@ Novela is built by the team at [Narative](https://www.narative.co), and built fo
 
 This guide will take you through setting up Novela with Gatsby Starter Novela.
 
-### Step 1: Starter installation
+## Step 1: Starter installation
 
-##### With `gatsby-cli`:
+### With `gatsby-cli`
 
 ```sh
 gatsby new novela-site https://github.com/narative/gatsby-starter-novela
 ```
 
-##### With `git clone`:
+### With `git clone`
 
 ```sh
 git clone git@github.com:narative/gatsby-starter-novela.git novela-site
@@ -44,7 +44,7 @@ cd novela-site
 yarn
 ```
 
-### Step 2: Develop & Build
+## Step 2: Develop & Build
 
 Once installed or cloned locally and all packages are installed you can begin developing your site.
 
@@ -59,6 +59,6 @@ yarn build
 yarn serve
 ```
 
-### Help
+## Help
 
 For more information visit the [Theme repository](https://github.com/narative/gatsby-theme-novela)
