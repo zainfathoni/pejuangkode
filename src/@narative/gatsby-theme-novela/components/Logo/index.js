@@ -1,7 +1,7 @@
 import { css } from "@emotion/core";
 import novelaTheme from "@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui";
 import React from "react";
-import { useThemeUI } from "theme-ui";
+import { useColorMode } from "theme-ui";
 
 /**
  * Paste in your SVG logo and return it from this component.
@@ -9,7 +9,7 @@ import { useThemeUI } from "theme-ui";
  * It is recommended to keep the height within 25-35px.
  */
 export default function Logo() {
-  const { colorMode } = useThemeUI();
+  const [colorMode] = useColorMode();
   return (
     <svg
       css={css`
