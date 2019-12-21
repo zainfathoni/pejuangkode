@@ -11,5 +11,10 @@ export default {
         grey: "hsl(0, 0%, 55%)",
       },
     },
+    prism: {
+      ...novelaTheme.colors.prism,
+      background: "hsla(224, 12%, 6%)",
+      comment: "hsl(210, 11%, 65%)",
+    },
   },
 };
