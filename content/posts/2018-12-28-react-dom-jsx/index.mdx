@@ -21,7 +21,7 @@ Oleh karena itulah, saya tergerak untuk menulis artikel berseri tentang React da
 
 Saya akan mencoba menyajikan keduanya dengan cara memperkenalkan fitur React satu persatu sekaligus mengaitkannya dengan konsep JavaScript di artikel terpisah. Jadi setiap kali rilis, saya akan merilis dua tulisan sekaligus, satu untuk React dan satu untuk JavaScript. Apabila Anda ingin memberi saran kepada saya mengenai hal ini, silakan hubungi saya melalui [Facebook Messenger](https://m.me/zain.fathoni.page).
 
-## 0. Persiapan
+## Persiapan
 
 Cara termudah untuk mulai menggunakan React adalah menggunakan [CodePen](https://codepen.io/) atau [CodeSandbox](https://codesandbox.io). Dengannya, kita tidak perlu meng-install apapun di komputer kita. Cukup dengan membuka website tersebut dan membuat project baru di sana. Simak kode berikut ini:
 
@@ -39,7 +39,7 @@ Kode di atas juga bisa Anda buka di [project CodeSandbox ini](https://codesandbo
 
 Di project tersebut terdapat tiga buah file, yaitu file JavaScript `index.js`, HTML `index.html`, dan JSON `package.json`. Kita akan bedah satu persatu file tersebut.
 
-## 1. ReactDOM
+## ReactDOM
 
 File `index.js` ini berisikan contoh penggunaan React yang paling sederhana. Di sini kita meng-`import` dua _library_, yaitu **React** & **ReactDOM**. Kegunaan ReactDOM di sini cukup jelas, yaitu me-_render_ sesuatu ke sebuah HTML element yang memiliki `id=root`. Coba buka file `index.html`, pada baris ke-30 akan Anda temukan `<div id="root"></div>`. Di situlah aplikasi React kita ini akan dipasang nantinya.
 
@@ -50,7 +50,7 @@ import ReactDOM from "react-dom";
 ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
 ```
 
-## 2. React
+## React
 
 Nah, yang agak aneh adalah, untuk apa kita meng-`import` **React**, padahal di situ tidak terlihat sama sekali penggunaan React?
 Untuk mengujinya, coba sekarang tambahkan `//` di depan `import React from 'react'` untuk menjadikannya komentar dan tidak terbaca oleh JavaScript.
@@ -88,7 +88,7 @@ Bagi yang baru paham JavaScript dan baru pertama kali ini belajar React, ada dua
 
 Untuk bisa menjawab kedua pertanyaan di atas, kita perlu berkenalan dulu dengan yang namanya **JSX** (JavaScript XML).
 
-## 3. JSX
+## JSX
 
 JSX digunakan di dalam React untuk mengekspresikan (_markup_ yang mirip dengan) HTML di dalam JavaScript. React [tidak mengharuskan](https://reactjs.org/docs/react-without-jsx.html) kita menggunakan JSX, tapi kebanyakan developer merasa sangat terbantu dengannya ketika menyusun tampilan antarmuka (UI) di dalam kode JavaScript.
 Apabila kode di atas kita tulis ulang tanpa menggunakan JSX, maka jadinya akan seperti ini:
@@ -104,7 +104,7 @@ Nah, di sini baru terlihat bahwa ternyata `React` memang dibutuhkan di baris ini
 
 Untuk bisa menggunakan JSX di React dengan baik, kita harus mampu membedakan antara **_Expression_** dan **_Statement_** di JavaScript. Saya akan menjelaskan perbedaan antara keduanya di tulisan yang akan datang, tapi sambil menunggu, sementara ini silakan coba baca dulu saja artikel [_Expressions versus statements in JavaScript_](http://2ality.com/2012/09/expressions-vs-statements.html) ini.
 
-### 3.1 Menggunakan _Expression_ di JSX
+### Menggunakan _Expression_ di JSX
 
 Dengan JSX, kita bisa membuat HTML yang dinamis. Caranya adalah dengan memasukkan _expression_ ke dalam JSX, dan mengapitnya dengan karakter kurung kurawal `{}` seperti ini:
 
@@ -130,7 +130,7 @@ ReactDOM.render(
 )
 ```
 
-### 3.2 JSX adalah _Expression_
+### JSX adalah _Expression_
 
 Selain bisa mengandung _Expression_, ternyata JSX itu sendiri merupakan _Expression_. Jadi setelah di-_compile_ oleh [Babel](https://babeljs.io/), JSX akan diganti menjadi pemanggilan fungsi `React.createElement()` yang menghasilkan objek JavaScript.
 
@@ -150,7 +150,7 @@ ReactDOM.render(
 )
 ```
 
-### 3.3 _Attributes_ & _Children_ di JSX
+### _Attributes_ & _Children_ di JSX
 
 Sebagaimana HTML biasa, JSX juga bisa menerima _attributes_ & _children_. Hanya saja, akibat keterbatasan JavaScript, ada sedikit perbedaan antara _attributes_ di JSX dan _attributes_ di HTML, antara lain sebagai berikut:
 
