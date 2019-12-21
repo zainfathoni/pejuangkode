@@ -7,8 +7,6 @@ hero: ./images/hero.jpg
 excerpt: Pengantar awal library React, React DOM, dan syntax JSX beserta latar belakangnya.
 ---
 
-import CodeSandbox from "../../../src/components/CodeSandbox";
-
 Sudah bukan perdebatan lagi bahwa [React](https://reactjs.org) adalah salah satu framework JavaScript yang [paling dominan saat ini](http://stateofjs.com/2017/front-end/results/). Peminatnya pun paling tinggi di antara framework-framework JavaScript lainnya. Namun demikian, React tergolong framework JavaScript yang [cukup sulit untuk dipelajari](https://medium.com/pejuang-kode/react-atau-vue-de25264893f4), berikut beberapa alasannya.
 
 ### React bukan _framework_, tapi _library_
@@ -25,11 +23,19 @@ Saya akan mencoba menyajikan keduanya dengan cara memperkenalkan fitur React sat
 
 ## 0. Persiapan
 
-Cara termudah untuk mulai menggunakan React adalah menggunakan [CodePen](https://codepen.io/) atau [CodeSandbox](https://codesandbox.io). Dengannya, kita tidak perlu meng-install apapun di komputer kita. Cukup dengan membuka website tersebut dan membuat project baru di sana. Sebagai alat peraga untuk penjelasan saya di tulisan ini, kita akan menggunakan sebuah project di CodeSandbox berikut ini:
+Cara termudah untuk mulai menggunakan React adalah menggunakan [CodePen](https://codepen.io/) atau [CodeSandbox](https://codesandbox.io). Dengannya, kita tidak perlu meng-install apapun di komputer kita. Cukup dengan membuka website tersebut dan membuat project baru di sana. Simak kode berikut ini:
 
-<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/0-persiapan/?autoresize=1&view=editor" />
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-Project di atas bisa Anda _edit_ secara langsung sebagai sarana untuk bereksperimen. Tetapi apabila Anda ingin menjalankannya di komputer Anda secara lokal, tinggal _download_ saja project tersebut, pastikan [NodeJS](https://nodejs.org/en/) sudah terinstall dengan menjalankan perintah `node -v`, lalu jalankan perintah `npm install && npm start` untuk menyalakan aplikasi.
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+)
+```
+
+Kode di atas juga bisa Anda buka di [project CodeSandbox ini](https://codesandbox.io/s/github/zainfathoni/react/tree/pengenalan-react%2F0-persiapan/) untuk Anda _edit_ secara langsung sebagai sarana bereksperimen. Tetapi apabila Anda ingin menjalankannya di komputer Anda secara lokal, tinggal _download_ saja project tersebut, pastikan [NodeJS](https://nodejs.org/en/) sudah terinstall dengan menjalankan perintah `node -v`, lalu jalankan perintah `npm install && npm start` untuk menyalakan aplikasi.
 
 Di project tersebut terdapat tiga buah file, yaitu file JavaScript `index.js`, HTML `index.html`, dan JSON `package.json`. Kita akan bedah satu persatu file tersebut.
 
@@ -48,14 +54,31 @@ ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
 
 Nah, yang agak aneh adalah, untuk apa kita meng-`import` **React**, padahal di situ tidak terlihat sama sekali penggunaan React?
 Untuk mengujinya, coba sekarang tambahkan `//` di depan `import React from 'react'` untuk menjadikannya komentar dan tidak terbaca oleh JavaScript.
-Maka yang Anda lihat adalah pesan error seperti ini:
 
-<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/2-react/?autoresize=1&fontsize=13&view=split" />
+```jsx {1}
+// import React from 'react'
+import ReactDOM from 'react-dom'
 
-Ternyata React dibutuhkan untuk bisa menjalankan baris ini:
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+)
+```
+
+Maka yang Anda lihat adalah [pesan error seperti ini](https://codesandbox.io/s/github/zainfathoni/react/tree/pengenalan-react%2F2-react/).
+
+<div class="Image__Small">
+  <img src="./images/react-is-not-defined.png" alt="Error: React tidak terdefinisi" />
+  <figcaption>Error: React tidak terdefinisi</figcaption>
+</div>
+
+Dari pesan error di atas kita bisa tahu bahwa ternyata `React` dibutuhkan untuk bisa menjalankan baris ini:
 
 ```jsx {2}
-ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById("root")
+);
 ```
 
 Bagi yang baru paham JavaScript dan baru pertama kali ini belajar React, ada dua pertanyaan besar di sini:
@@ -92,17 +115,40 @@ ReactDOM.render(
 );
 ```
 
-Sebagai contoh, amati bagaimana cara saya membuat kalimat `Hello, world!` sebelumnya menjadi bergantung pada nilai variabel lain. Coba ubah nilai dari variabel `firstName` dan `lastName` di sini, dan amati hasilnya!
+Sebagai contoh, amati bagaimana cara saya membuat kalimat `Hello, world!` sebelumnya menjadi bergantung pada nilai variabel lain. Coba ubah nilai dari variabel `firstName` dan `lastName` di [project CodeSandbox ini](https://codesandbox.io/s/github/zainfathoni/react/tree/pengenalan-react%2F3-1-expression-di-jsx/), dan amati hasilnya!
 
-<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/3-1-expression-di-jsx/?autoresize=1&fontsize=12&view=split" />
+```jsx {4-5,8}
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+const firstName = 'Pejuang'
+const lastName = 'Kode'
+
+ReactDOM.render(
+  <h1>Hello, {firstName + ' ' + lastName}!</h1>,
+  document.getElementById('root')
+)
+```
 
 ### 3.2 JSX adalah _Expression_
 
 Selain bisa mengandung _Expression_, ternyata JSX itu sendiri merupakan _Expression_. Jadi setelah di-_compile_ oleh [Babel](https://babeljs.io/), JSX akan diganti menjadi pemanggilan fungsi `React.createElement()` yang menghasilkan objek JavaScript.
 
-Dengan demikian, kita bisa memperlakukannya sebagaimana _Expression_ JavaScript pada umumnya. Misalnya, menjadikannya sebagai nilai kembalian dari sebuah fungsi. Kita coba ganti JSX di atas dengan pemanggilan sebuah fungsi `greet(name)`. Coba kosongkan parameter di pemanggilan fungsi `greet()` dan amati hasilnya!
+Dengan demikian, kita bisa memperlakukannya sebagaimana _Expression_ JavaScript pada umumnya. Misalnya, menjadikannya sebagai nilai kembalian dari sebuah fungsi. Kita coba ganti JSX di atas dengan pemanggilan sebuah fungsi `greet(name)`. Coba kosongkan parameter di pemanggilan fungsi `greet()` dan [amati hasilnya](https://codesandbox.io/s/github/zainfathoni/react/tree/pengenalan-react%2F3-2-jsx-adalah-expression/)!
 
-<CodeSandbox src="https://codesandbox.io/embed/github/zainfathoni/react/tree/pengenalan-react/3-2-jsx-adalah-expression/?autoresize=1&fontsize=12&view=split" />
+```jsx {4-6,9}
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+function greet(name) {
+  return <h1>Hello, {name || 'Kisanak'}!</h1>
+}
+
+ReactDOM.render(
+  greet('Pejuang'),
+  document.getElementById('root')
+)
+```
 
 ### 3.3 _Attributes_ & _Children_ di JSX
 
