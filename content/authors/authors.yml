@@ -22,6 +22,25 @@
     - name: medium
       url: https://medium.com/@zain.fathoni
 
+- name: Muhammad Irwan Andriawan
+  slug: andriawan
+  bio: |
+    Muhammad Irwan Andriawan adalah seorang Software Developer di salah satu Software house di Jakarta Timur. Sangat senang berkontribusi untuk proyek open source. Hobi menelisik teknologi web terbaru. Saat ini ia sedang bersemangat mempelajari ekosistem Javascript framework populer diantaranya Vue JS, React dan Angular.
+    https://irwan.andriawan.com
+  avatar: ./avatars/andriawan.jpg
+  social:
+    - name: github
+      url: https://github.com/andriawan
+    - name: twitter
+      url: https://twitter.com/irwan2andriawan
+    - name: facebook
+      url: https://www.facebook.com/muhammad.irwan.andriawan
+    - name: instagram
+      url: https://www.instagram.com/andriawan_irwan/
+    - name: linkedin
+      url: https://www.linkedin.com/in/andriawan
+      
+
 
 - name: Darvin Sinaga
   slug: darvin-sinaga
@@ -46,4 +65,4 @@
       url: https://www.linkedin.com/in/darvinsinaga/
     - name: medium
       url: https://medium.com/@darvinsinaga
-      
+

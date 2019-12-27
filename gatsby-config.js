@@ -35,6 +35,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-manifest`,
+      /* eslint-disable @typescript-eslint/camelcase */
       options: {
         name: `Pejuang Kode by Zain Fathoni`,
         short_name: `Pejuang Kode`,
@@ -44,6 +45,7 @@ module.exports = {
         display: `standalone`,
         icon: `src/assets/favicon.png`,
       },
+      /* eslint-enable @typescript-eslint/camelcase */
     },
   ],
 };
