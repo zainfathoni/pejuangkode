@@ -51,7 +51,7 @@
 
     http://darvinsinaga.com
   avatar: ./avatars/darvin.jpg
-  featured: true
+  featured: false
   social:
     - name: github
       url: https://github.com/nagacoder
@@ -65,4 +65,3 @@
       url: https://www.linkedin.com/in/darvinsinaga/
     - name: medium
       url: https://medium.com/@darvinsinaga
-
